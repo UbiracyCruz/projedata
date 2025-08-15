@@ -2,6 +2,7 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 public class Funcionario extends Pessoa{
     private BigDecimal salario;
@@ -12,6 +13,8 @@ public class Funcionario extends Pessoa{
         this.setDataNascimento(dataNascimento);
         this.salario = salario;
         this.funcao = funcao;
+
+        new Funcionarios().addFuncionarios(this);
     }
 
     public BigDecimal getSalario() {
